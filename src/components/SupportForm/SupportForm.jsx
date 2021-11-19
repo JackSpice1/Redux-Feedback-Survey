@@ -20,7 +20,7 @@ function SupportForm( props ){
 
     const addSupport = event => {
         dispatch({
-            type: 'ADD_FEEDBACK',
+            type: 'ADD_SUPPORT',
             payload: support
         })
     }

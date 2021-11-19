@@ -20,7 +20,7 @@ function UnderstandingForm( props ){
 
     const addUnderstanding= event => {
         dispatch({
-            type: 'ADD_FEEDBACK',
+            type: 'ADD_UNDERSTANDING',
             payload: understanding
         })
     }

@@ -8,6 +8,8 @@ import FeelingForm from '../FeelingForm/FeelingForm';
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
 import SupportForm from '../SupportForm/SupportForm';
 import CommentsForm from '../CommentsForm/CommentsForm';
+import ReviewForm from '../ReviewForm/ReviewForm';
+import ThankYouForm from '../ThankYouForm/ThankYouForm'
 
 function App() {
 
@@ -22,9 +24,11 @@ function App() {
     <Routes>
 
       <Route path='/' element={<FeelingForm/>}></Route>
-      <Route path='/understanding' element={<UnderstandingForm/>}></Route>
-      <Route path='/support' element={<SupportForm/>}></Route>
-      <Route path='/comments' elements={<CommentsForm/>}></Route>
+      <Route exact path='/understanding' element={<UnderstandingForm/>}></Route>
+      <Route exact path='/support' element={<SupportForm/>}></Route>
+      <Route exact path='/comments' element={<CommentsForm/>}></Route>
+      <Route exact path='/review' element={<ReviewForm/>}></Route>
+      <Route exact path='/thankyou' element={<ThankYouForm/>}></Route>
 
     </Routes>
     </BrowserRouter>

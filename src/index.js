@@ -11,13 +11,22 @@ import logger from 'redux-logger';
 //reducers must be pure functions, given any input, output must be the same 
 // an action is DISPATCHED and recieved by a reducer, the reducer's job is to return the changed state
 
-const feedback = (state = [], action)=>{
+const feedback = (state = { }, action)=>{
     console.log('hello world from a reducer! Action:', action);
-    if (action.type === 'ADD_FEEDBACK'){
-        return [...state, action.payload];
+    if (action.type === 'ADD_FEELING'){
+        return {...state, feeling: action.payload};
+    }
+    if (action.type === 'ADD_UNDERSTANDING'){
+        return {...state, understanding: action.payload};
+    }
+    if (action.type === 'ADD_SUPPORT'){
+        return {...state, support: action.payload};
+    }
+    if (action.type==='ADD_COMMENTS'){
+        state={...state, comments: action.payload}
     }
     return state;
-}
+};
 
 //store
 //where global state is stored so that it can be shared w/ all components 
