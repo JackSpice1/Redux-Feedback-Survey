@@ -37,7 +37,7 @@ function UnderstandingForm( props ){
                 <option value={5}>5</option>
                 </Form.Select>
                 
-            <Button variant="primary" onClick={addFeeling}>
+            <Button variant="primary" onClick={addUnderstanding}>
                 <Link to="/support">Next</Link>
             </Button>
         </div>

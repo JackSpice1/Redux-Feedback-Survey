@@ -15,7 +15,7 @@ function SupportForm( props ){
 
     const getSupport = event => {
         console.log('in getSupport', event.target.value);
-        setSuppot(event.target.value);
+        setSupport(event.target.value);
     }
 
     const addSupport = event => {
